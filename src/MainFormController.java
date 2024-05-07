@@ -1,6 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -10,6 +11,8 @@ public class MainFormController {
     public TextField txtName; //Auto Generate codes
     public TextField txtLanguage;
     public TextField txtCountry;
+    public Label lblAnswer;
+    public TextField txtCity;
 
     public void printOnAction(ActionEvent actionEvent) {
         System.out.println(txtName.getText());
@@ -40,5 +43,9 @@ public class MainFormController {
             System.out.println(txtCountry.getText());
             txtCountry.clear();
         }
+    }
+
+    public void printCityOnAction(KeyEvent keyEvent) {
+        lblAnswer.setText(txtCity.getText());
     }
 }
