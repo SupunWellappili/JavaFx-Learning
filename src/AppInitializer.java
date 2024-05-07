@@ -1,11 +1,9 @@
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 
 public class AppInitializer extends Application {
 
@@ -23,6 +21,9 @@ public class AppInitializer extends Application {
         primaryStage.show();*/
 
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("MainForm.fxml"))));
+        primaryStage.setTitle("My First App");
         primaryStage.show();
+
+
     }
 }
