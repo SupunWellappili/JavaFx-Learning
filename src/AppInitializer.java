@@ -15,11 +15,14 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        URL resource = getClass().getResource("MainForm.fxml");//option+return
+       /* URL resource = getClass().getResource("MainForm.fxml");//option+return
         Parent load = FXMLLoader.load(resource);//object --> parent (object type aka dagannawa parent type akakta aya import krna gannawa..)
         Scene scene = new Scene(load);
         primaryStage.setScene(scene);
         primaryStage.setTitle("My first App");
+        primaryStage.show();*/
+
+        primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("MainForm.fxml"))));
         primaryStage.show();
     }
 }
