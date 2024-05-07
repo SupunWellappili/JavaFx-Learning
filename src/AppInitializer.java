@@ -1,5 +1,10 @@
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class AppInitializer extends Application {
 
@@ -8,7 +13,9 @@ public class AppInitializer extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
+        URL resource = getClass().getResource("MainForm.fxml");
+        Parent load = FXMLLoader.load(resource);
 
     }
 }
