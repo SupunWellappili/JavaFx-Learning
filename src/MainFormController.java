@@ -2,6 +2,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 public class MainFormController {
@@ -12,14 +13,14 @@ public class MainFormController {
 
     public void printOnAction(ActionEvent actionEvent) {
         System.out.println(txtName.getText());
-       // txtName.setText("");//Don't Use
+        // txtName.setText("");//Don't Use
         txtName.clear();
     }
 
     public void printMyTextOnAction(ActionEvent actionEvent) {
 
-        if (txtLanguage.getText().isEmpty()){
-            new Alert(Alert.AlertType.WARNING,"Value is Required", ButtonType.OK).show();
+        if (txtLanguage.getText().isEmpty()) {
+            new Alert(Alert.AlertType.WARNING, "Value is Required", ButtonType.OK).show();
             return;
         }
 
@@ -29,10 +30,15 @@ public class MainFormController {
 
 
     public void onKeyPressedOnAction(KeyEvent keyEvent) {
-        System.out.println(txtCountry.getText());
+        // System.out.println(txtCountry.getText());
     }
 
 
     public void onKeyReleasedOnAction(KeyEvent keyEvent) {
+      //  System.out.println(keyEvent.getCode());
+        if (keyEvent.getCode().equals(KeyCode.ENTER)){
+            System.out.println(txtCountry.getText());
+            txtCountry.clear();
+        }
     }
 }
