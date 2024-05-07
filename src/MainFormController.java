@@ -33,5 +33,6 @@ public class MainFormController {
     }
 
 
-
+    public void onKeyReleasedOnAction(KeyEvent keyEvent) {
+    }
 }

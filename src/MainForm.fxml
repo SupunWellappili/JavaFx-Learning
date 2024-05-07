@@ -21,6 +21,6 @@
       <Separator layoutX="11.0" layoutY="122.0" prefHeight="0.0" prefWidth="453.0" />
       <TextField fx:id="txtLanguage" layoutX="9.0" layoutY="137.0" onAction="#printMyTextOnAction" prefHeight="26.0" prefWidth="445.0" promptText="Type Here" />
       <Separator layoutX="12.0" layoutY="192.0" prefHeight="5.0" prefWidth="452.0" />
-      <TextField fx:id="txtCountry" layoutX="12.0" layoutY="208.0" onKeyPressed="#onKeyPressedOnAction" prefHeight="23.0" prefWidth="444.0" promptText="Enter Button Check" />
+      <TextField fx:id="txtCountry" layoutX="12.0" layoutY="208.0" onKeyPressed="#onKeyPressedOnAction" onKeyReleased="#onKeyReleasedOnAction" prefHeight="23.0" prefWidth="444.0" promptText="Enter Button Check" />
    </children>
 </AnchorPane>
