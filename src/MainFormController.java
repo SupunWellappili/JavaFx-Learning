@@ -10,18 +10,22 @@ import javafx.scene.input.KeyEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainFormController  {
+public class MainFormController {
 
     public TextField txtName; //Auto Generate codes
-    public TextField txtLanguage; 
+    public TextField txtLanguage;
     public TextField txtCountry;
     public Label lblAnswer;
     public TextField txtCity;
     public TextField txtFinalText;
 
-    public void initialize(){ //public, void (interface aka tr)
+    public void initialize() { //public, void (interface aka tr)
 //Auto Trigger wenawaa(Call Wenawaa)
-        System.out.println("init");
+        //System.out.println("init");
+
+        txtFinalText.textProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println(newValue);
+        });
     }
 
     public void printOnAction(ActionEvent actionEvent) {
