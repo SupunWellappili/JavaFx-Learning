@@ -13,14 +13,15 @@ import java.util.ResourceBundle;
 public class MainFormController  {
 
     public TextField txtName; //Auto Generate codes
-    public TextField txtLanguage;
+    public TextField txtLanguage; 
     public TextField txtCountry;
     public Label lblAnswer;
     public TextField txtCity;
     public TextField txtFinalText;
 
     public void initialize(){ //public, void (interface aka tr)
-
+//Auto Trigger wenawaa(Call Wenawaa)
+        System.out.println("init");
     }
 
     public void printOnAction(ActionEvent actionEvent) {
