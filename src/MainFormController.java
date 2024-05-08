@@ -1,4 +1,5 @@
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
@@ -72,6 +73,8 @@ public class MainFormController {
     }*/
 
 
+//-----------------------------------------
+
     public void initialize() {
        // setData1();
         setData2();
@@ -98,11 +101,23 @@ public class MainFormController {
         dataSet.add("Matara");
 
         cmdCities.setItems(dataSet);//Error (Java & JAvaFX Direct Not Support)
+
+        //--------------------1st-----------------------
 */
-        ObservableList<String> dataSet = FXCollections.observableArrayList();
+        /*ObservableList<String> dataSet = FXCollections.observableArrayList();
         dataSet.add("Colombo");
         dataSet.add("Galle");
         dataSet.add("Matara");
-        cmdCities.setItems(dataSet);
+        cmdCities.setItems(dataSet);*/
+
+        //--------------------2nd------------------------
+
+        ArrayList<String> list  = new ArrayList<>();
+        list.add("Colombo");
+        list.add("Galle");
+        list.add("Matara");
+        ObservableList<String> dataSet2 = FXCollections.observableArrayList(list);
+        cmdCities.setItems(dataSet2);
+
     }
 }
