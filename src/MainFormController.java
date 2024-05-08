@@ -10,7 +10,7 @@ import javafx.scene.input.KeyEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainFormController implements Initializable {
+public class MainFormController  {
 
     public TextField txtName; //Auto Generate codes
     public TextField txtLanguage;
@@ -18,6 +18,10 @@ public class MainFormController implements Initializable {
     public Label lblAnswer;
     public TextField txtCity;
     public TextField txtFinalText;
+
+    public void initialize(){ //public, void (interface aka tr)
+
+    }
 
     public void printOnAction(ActionEvent actionEvent) {
         System.out.println(txtName.getText());
@@ -54,8 +58,8 @@ public class MainFormController implements Initializable {
         lblAnswer.setText(txtCity.getText());
     }
 
-    @Override
+/*    @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("Initialize");
-    }
+    }*/
 }
