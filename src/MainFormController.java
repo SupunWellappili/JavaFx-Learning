@@ -5,6 +5,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class MainFormController {
@@ -16,6 +17,7 @@ public class MainFormController {
     public TextField txtCity;
     public TextField txtFinalText;
     public ComboBox<String> cmbLanguages;
+    public ComboBox cmdCities;
 
    /* public void initialize() { //public, void (interface aka run wenawath ekkama run wee.)
 //Auto Trigger wenawaa(Call Wenawaa)
@@ -70,6 +72,7 @@ public class MainFormController {
     public void initialize() {
         setData1();
         setData2();
+        setData3();
     }
 
     public void setData1() {
@@ -82,5 +85,15 @@ public class MainFormController {
 
     private void setData2() {
         cmbLanguages.getItems().addAll("C#", "JAVA", "JavaScript", "Python", "TypeScript");
+    }
+
+    private void setData3(){
+        ArrayList<String> dataSet = new ArrayList<>();
+        dataSet.add("Colombo");
+        dataSet.add("Galle");
+        dataSet.add("Matara");
+
+        cmdCities.setItems(dataSet);//Error (Java & JAvaFX Direct Not Support)
+
     }
 }
