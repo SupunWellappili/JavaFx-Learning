@@ -1,3 +1,5 @@
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -6,6 +8,7 @@ import javafx.scene.input.KeyEvent;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Observable;
 import java.util.ResourceBundle;
 
 public class MainFormController {
@@ -70,9 +73,10 @@ public class MainFormController {
 
 
     public void initialize() {
-        setData1();
+       // setData1();
         setData2();
         setData3();
+
     }
 
     public void setData1() {
@@ -87,13 +91,18 @@ public class MainFormController {
         cmbLanguages.getItems().addAll("C#", "JAVA", "JavaScript", "Python", "TypeScript");
     }
 
-    private void setData3(){
-        ArrayList<String> dataSet = new ArrayList<>();
+    private void setData3() {
+        /*ArrayList<String> dataSet = new ArrayList<>();
         dataSet.add("Colombo");
         dataSet.add("Galle");
         dataSet.add("Matara");
 
         cmdCities.setItems(dataSet);//Error (Java & JAvaFX Direct Not Support)
-
+*/
+        ObservableList<String> dataSet = FXCollections.observableArrayList();
+        dataSet.add("Colombo");
+        dataSet.add("Galle");
+        dataSet.add("Matara");
+        cmdCities.setItems(dataSet);
     }
 }
