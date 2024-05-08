@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="MainFrom03Controller03"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFrom03Controller03">
+   <children>
+      <Label layoutX="56.0" layoutY="21.0" prefHeight="30.0" prefWidth="314.0" text="Select Your  Languages">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="cbxJava" layoutX="57.0" layoutY="68.0" mnemonicParsing="false" text="Java" />
+      <CheckBox fx:id="cbxC" layoutX="146.0" layoutY="68.0" mnemonicParsing="false" text="C" />
+      <CheckBox fx:id="cbxRuby" layoutX="306.0" layoutY="69.0" mnemonicParsing="false" text="Rubby" />
+      <CheckBox fx:id="cbxKotlin" layoutX="216.0" layoutY="69.0" mnemonicParsing="false" text="Kotlin" />
+      <Button layoutX="405.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnSubmitOnAction" prefHeight="26.0" prefWidth="94.0" text="Submit form">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ListView fx:id="languageList" layoutX="57.0" layoutY="105.0" prefHeight="164.0" prefWidth="447.0" />
+   </children>
 </AnchorPane>
