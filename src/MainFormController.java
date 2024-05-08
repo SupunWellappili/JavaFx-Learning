@@ -68,12 +68,10 @@ public class MainFormController {
 
 
     public void initialize(){
-        cmbLanguages.getItems().add("supun");
-        cmbLanguages.getItems().add(12);
-        cmbLanguages.getItems().add(56.4);
-        cmbLanguages.getItems().add(true);
-        cmbLanguages.getItems().add('A');
+        cmbLanguages.getItems().add("C#");
+        cmbLanguages.getItems().add("JAVA");
+        cmbLanguages.getItems().add("JavaScript");
+        cmbLanguages.getItems().add("Python");
+        cmbLanguages.getItems().add("TypeScript");
     }
-
-
 }
