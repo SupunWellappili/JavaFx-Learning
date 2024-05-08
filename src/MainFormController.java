@@ -68,10 +68,15 @@ public class MainFormController {
 
 
     public void initialize(){
+        setData1();
+    }
+
+    public void setData1(){
         cmbLanguages.getItems().add("C#");
         cmbLanguages.getItems().add("JAVA");
         cmbLanguages.getItems().add("JavaScript");
         cmbLanguages.getItems().add("Python");
         cmbLanguages.getItems().add("TypeScript");
+
     }
 }
