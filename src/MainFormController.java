@@ -15,7 +15,7 @@ public class MainFormController {
     public Label lblAnswer;
     public TextField txtCity;
     public TextField txtFinalText;
-    public ComboBox cmbLanguages;
+    public ComboBox<String> cmbLanguages;
 
    /* public void initialize() { //public, void (interface aka run wenawath ekkama run wee.)
 //Auto Trigger wenawaa(Call Wenawaa)
