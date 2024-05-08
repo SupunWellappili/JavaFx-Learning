@@ -76,7 +76,7 @@ public class MainFormController {
 //-----------------------------------------
 
     public void initialize() {
-       // setData1();
+        // setData1();
         setData2();
         setData3();
 
@@ -112,12 +112,19 @@ public class MainFormController {
 
         //--------------------2nd------------------------
 
-        ArrayList<String> list  = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
         list.add("Colombo");
         list.add("Galle");
         list.add("Matara");
         ObservableList<String> dataSet2 = FXCollections.observableArrayList(list);
         cmdCities.setItems(dataSet2);
 
+        //---------------------------------------------
+
+        cmdCities.getSelectionModel().selectedItemProperty()
+                .addListener((observable, oldValue, newValue) ->
+                        System.out.println(newValue));
     }
+
+
 }
