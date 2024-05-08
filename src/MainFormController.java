@@ -1,9 +1,6 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
@@ -18,15 +15,16 @@ public class MainFormController {
     public Label lblAnswer;
     public TextField txtCity;
     public TextField txtFinalText;
+    public ComboBox cmbLanguages;
 
-    public void initialize() { //public, void (interface aka tr)
+   /* public void initialize() { //public, void (interface aka run wenawath ekkama run wee.)
 //Auto Trigger wenawaa(Call Wenawaa)
         //System.out.println("init");
 
         txtFinalText.textProperty().addListener((observable, oldValue, newValue) -> {
             System.out.println(newValue);
         });
-    }
+    }*/
 
     public void printOnAction(ActionEvent actionEvent) {
         System.out.println(txtName.getText());
@@ -67,4 +65,15 @@ public class MainFormController {
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("Initialize");
     }*/
+
+
+    public void initialize(){
+        cmbLanguages.getItems().add("supun");
+        cmbLanguages.getItems().add(12);
+        cmbLanguages.getItems().add(56.4);
+        cmbLanguages.getItems().add(true);
+        cmbLanguages.getItems().add('A');
+    }
+
+
 }

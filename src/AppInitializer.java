@@ -24,6 +24,5 @@ public class AppInitializer extends Application {
         primaryStage.setTitle("My First App");
         primaryStage.show();
 
-
     }
 }
