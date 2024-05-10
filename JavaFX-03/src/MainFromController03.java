@@ -3,6 +3,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
 
 
 public class MainFromController03 {
@@ -11,6 +13,8 @@ public class MainFromController03 {
     public CheckBox cbxKotlin;
     public CheckBox cbxRuby;
     public ListView<String> languageList;
+    public RadioButton rdnFemale;
+    public TextField txtGenderAnswer;
 
 
     public void btnSubmitOnAction(ActionEvent actionEvent) {
@@ -21,6 +25,10 @@ public class MainFromController03 {
         if (cbxRuby.isSelected()) list.add("Ruby");
 
         languageList.setItems(list);
+
+    }
+
+    public void PrintGenderOnAction(ActionEvent actionEvent) {
 
     }
 }

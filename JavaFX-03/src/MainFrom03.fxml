@@ -7,6 +7,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,11 +15,11 @@
    <children>
       <Label layoutX="56.0" layoutY="21.0" prefHeight="30.0" prefWidth="314.0" text="Select Your  Languages">
          <font>
-            <Font size="25.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <CheckBox fx:id="cbxJava" layoutX="57.0" layoutY="68.0" mnemonicParsing="false" text="Java" />
-      <CheckBox fx:id="cbxC" layoutX="146.0" layoutY="68.0" mnemonicParsing="false" text="C" />
+      <CheckBox fx:id="cbxC" layoutX="145.0" layoutY="68.0" mnemonicParsing="false" text="C" />
       <CheckBox fx:id="cbxRuby" layoutX="306.0" layoutY="69.0" mnemonicParsing="false" text="Rubby" />
       <CheckBox fx:id="cbxKotlin" layoutX="216.0" layoutY="69.0" mnemonicParsing="false" text="Kotlin" />
       <Button layoutX="405.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnSubmitOnAction" prefHeight="26.0" prefWidth="94.0" text="Submit form">
@@ -27,24 +28,27 @@
          </cursor>
       </Button>
       <ListView fx:id="languageList" layoutX="53.0" layoutY="108.0" prefHeight="132.0" prefWidth="447.0" />
-      <RadioButton layoutX="70.0" layoutY="285.0" mnemonicParsing="false" text="Male">
+      <RadioButton layoutX="70.0" layoutY="288.0" mnemonicParsing="false" selected="true" text="Male">
          <font>
-            <Font size="20.0" />
+            <Font name="Andale Mono" size="20.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdnFemale" layoutX="200.0" layoutY="287.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
+         <font>
+            <Font name="Andale Mono" size="19.0" />
          </font>
       </RadioButton>
-      <RadioButton layoutX="200.0" layoutY="287.0" mnemonicParsing="false" text="Female">
+      <Button layoutX="356.0" layoutY="284.0" mnemonicParsing="false" onAction="#PrintGenderOnAction" text="Print Gender">
          <font>
-            <Font size="20.0" />
-         </font>
-      </RadioButton>
-      <Button layoutX="356.0" layoutY="284.0" mnemonicParsing="false" text="Print Gender">
-         <font>
-            <Font size="17.0" />
+            <Font name="Andale Mono" size="16.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TextField layoutX="59.0" layoutY="344.0" prefHeight="26.0" prefWidth="430.0" />
+      <TextField fx:id="txtGenderAnswer" layoutX="59.0" layoutY="344.0" prefHeight="26.0" prefWidth="430.0" />
    </children>
 </AnchorPane>
