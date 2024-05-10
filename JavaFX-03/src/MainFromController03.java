@@ -18,7 +18,7 @@ public class MainFromController03 {
         if (cbxJava.isSelected()) list.add("Java");
         if (cbxC.isSelected()) list.add("C");
         if (cbxKotlin.isSelected()) list.add("Kotlin");
-        if (cbxRuby.isSelected()) list.add("Rubby");
+        if (cbxRuby.isSelected()) list.add("Ruby");
 
         languageList.setItems(list);
 
