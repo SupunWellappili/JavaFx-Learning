@@ -30,5 +30,12 @@ public class MainFromController03 {
 
     public void PrintGenderOnAction(ActionEvent actionEvent) {
 
+        //-----------------1st Solution-----------------------------
+        String gender = "Male";
+        if (rdnFemale.isSelected()) gender = "Female";
+        txtGenderAnswer.setText(gender);
+
+        //-----------------2nd Solution-----------------------------
+        txtGenderAnswer.setText(rdnFemale.isSelected() ? "Female" : "Male");
     }
 }
