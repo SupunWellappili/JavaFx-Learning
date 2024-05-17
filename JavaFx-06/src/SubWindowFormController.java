@@ -1,6 +1,6 @@
 import javafx.scene.control.TextField;
 
-public class SubWindowForm {
+public class SubWindowFormController {
     public TextField txtImportedText;
 
     public void setValue(String value){
