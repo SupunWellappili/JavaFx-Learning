@@ -1,5 +1,3 @@
-import Customer;
-
 import java.util.ArrayList;
 
 public class CustomerDatabaseTable {
