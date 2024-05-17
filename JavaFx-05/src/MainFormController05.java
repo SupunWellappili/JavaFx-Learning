@@ -1,32 +1,38 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-
-import java.util.Observable;
-
 public class MainFormController05 {
 
 
-    public TableView<Customer> tblCustomer;
-    public TableColumn colID;
-    public TableColumn colName;
-    public TableColumn colAddress;
-    public TableColumn colSalary;
-    public TableColumn colOperate;
+    public TableView<CustomerTM> tblCustomer;
+    public TableColumn<CustomerTM, String> colID;
+    public TableColumn<CustomerTM, String> colName;
+    public TableColumn<CustomerTM, String> colAddress;
+    public TableColumn<CustomerTM, String> colSalary;
+    public TableColumn<CustomerTM, Button> colOperate;
 
-    public void initialize(){
+    public void initialize() {
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
         colName.setCellValueFactory(new PropertyValueFactory<>("name"));
         colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         colSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+        colOperate.setCellValueFactory(new PropertyValueFactory<>("btn"));
         loadData();
     }
 
     private void loadData() {
         //code base to data loading
-        ObservableList<Customer> obList = FXCollections.observableArrayList(CustomerDatabaseTable.dataSource);
+        ObservableList<CustomerTM> obList = FXCollections.observableArrayList();
+
+        for (Customer c : CustomerDatabaseTable.dataSource
+        ) {
+            Button btn = new Button("Delete");
+            obList.add(new CustomerTM(c.getId(), c.getName(), c.getAddress(), c.getSalary(), btn));
+
+        }
         tblCustomer.setItems(obList);
     }
 
