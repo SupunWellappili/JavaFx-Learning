@@ -10,13 +10,16 @@ public class MainFormController07 {
 
 
     public void openWindowOneOnAction(ActionEvent actionEvent) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("WindowOneForm.fxml"));
-        context.getChildren().clear();
-        context.getChildren().add(parent);
+        setUi("WindowOneForm");
     }
 
     public void openWindowTwoOnAction(ActionEvent actionEvent) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource("WindowTwoForm.fxml"));
+        setUi("WindowTwoForm");
+
+    }
+
+    private void setUi(String location) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource(location + ".fxml"));
         context.getChildren().clear();
         context.getChildren().add(parent);
 
