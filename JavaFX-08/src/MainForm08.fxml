@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="mainFormContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainFormController08">
+   <children>
+      <Button layoutX="258.0" layoutY="321.0" mnemonicParsing="false" onAction="#openWindowOneInAction" text="Open Main Window 01" />
+      <Button layoutX="418.0" layoutY="321.0" mnemonicParsing="false" onAction="#openWindowTwoInAction" text="Open Main Window 02" />
+      <Label layoutX="132.0" layoutY="119.0" prefHeight="81.0" prefWidth="363.0" text="Main Window Form">
+         <font>
+            <Font name="System Bold" size="43.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
