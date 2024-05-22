@@ -12,14 +12,20 @@ public class MainFormController08 {
     public AnchorPane mainFormContext;
 
     public void openWindowOneInAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) mainFormContext.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("WindowsOneForm.fxml"))));
+        /*Stage stage = (Stage) mainFormContext.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("WindowsOneForm.fxml"))));*/
+        setUi("WindowsOneForm");
     }
 
     public void openWindowTwoInAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) mainFormContext.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("WindowsTwoForm.fxml"))));
+       /* Stage stage = (Stage) mainFormContext.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("WindowsTwoForm.fxml"))));*/
+        setUi("WindowsTwoForm");
     }
 
-}
+    private void setUi(String location) throws IOException {
+        Stage stage = (Stage) mainFormContext.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(location + ".fxml"))));
 
+    }
+}
